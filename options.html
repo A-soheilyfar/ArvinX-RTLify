@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="fa" dir="rtl">
+<html>
   <head>
     <meta charset="UTF-8" />
-    <title>تنظیمات — RTL Toggle Pro</title>
+    <title>Options</title>
     <style>
       :root {
         --accent: #0a7d4f;
@@ -21,7 +21,7 @@
         }
       }
       body {
-        max-width: 720px;
+        max-width: 760px;
         margin: 2rem auto;
         padding: 0 1rem;
         background: var(--bg);
@@ -36,6 +36,7 @@
         margin-top: 2rem;
         border-bottom: 1px solid var(--border);
         padding-bottom: 0.3rem;
+        font-size: 1.1rem;
       }
       ul {
         list-style: none;
@@ -49,19 +50,35 @@
         border: 1px solid var(--border);
         border-radius: 6px;
         margin-bottom: 0.5rem;
+      }
+      li .domain {
         font-family: monospace;
         direction: ltr;
         text-align: left;
+        flex: 1;
+      }
+      li .state {
+        font-size: 12px;
+        padding: 2px 8px;
+        border-radius: 10px;
+        margin: 0 8px;
+      }
+      li .state.on {
+        background: #0a7d4f;
+        color: #fff;
+      }
+      li .state.off {
+        background: #999;
+        color: #fff;
       }
       li button {
-        font-family: inherit;
-        direction: rtl;
         background: #c43838;
         color: white;
         border: none;
         border-radius: 4px;
-        padding: 0.25rem 0.7rem;
+        padding: 0.2rem 0.6rem;
         cursor: pointer;
+        font-family: inherit;
       }
       button.action {
         background: var(--accent);
@@ -79,22 +96,44 @@
       .muted {
         color: var(--muted);
       }
+      .row {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .big-toggle {
+        font-size: 15px;
+        padding: 0.8rem 1rem;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(10, 125, 79, 0.06);
+      }
     </style>
   </head>
   <body>
-    <h1>تنظیمات RTL Toggle Pro</h1>
+    <h1 id="optTitle"></h1>
 
-    <h2>دامنه‌های همیشه RTL</h2>
-    <p class="muted">
-      هر سایتی که اینجا ببینی، هنگام باز شدن به‌صورت خودکار RTL می‌شود.
-    </p>
+    <h2 id="optGlobalTitle"></h2>
+    <label class="big-toggle">
+      <input type="checkbox" id="chkGlobal" />
+      <span id="lblGlobal"></span>
+    </label>
+    <p class="muted" id="optGlobalDesc"></p>
+
+    <h2 id="optDomainsTitle"></h2>
     <ul id="domains"></ul>
-    <p id="empty" class="muted">هیچ دامنه‌ای ثبت نشده است.</p>
-    <button id="clear" class="action">حذف همه</button>
+    <p id="empty" class="muted"></p>
+    <button id="clear" class="action"></button>
 
-    <h2>پشتیبان‌گیری</h2>
-    <button id="export" class="action">دانلود فایل پشتیبان</button>
-    <input type="file" id="import" accept=".json" />
+    <h2 id="optBackupTitle"></h2>
+    <div class="row">
+      <button id="export" class="action"></button>
+      <input type="file" id="import" accept=".json" />
+    </div>
     <p class="muted" id="importMsg"></p>
 
     <script src="options.js"></script>
