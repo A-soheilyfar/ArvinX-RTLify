@@ -1,0 +1,46 @@
+{
+  "extName": { "message": "ArvinX RTLify" },
+  "extDesc": {
+    "message": "تبدیل هوشمند صفحات وب به راست‌به‌چپ با حافظه دامنه و محافظت از کدها."
+  },
+  "cmdDesc": { "message": "تغییر سریع RTL" },
+  "toggleBtnOn": { "message": "غیرفعال‌سازی RTL" },
+  "toggleBtnOff": { "message": "فعال‌سازی RTL" },
+  "hostNA": { "message": "در این صفحه قابل استفاده نیست" },
+  "smartModeTitle": { "message": "حالت هوشمند (محتوای لاتین)" },
+  "smartOff": { "message": "خاموش" },
+  "smartSafe": { "message": "ایمن" },
+  "smartAggressive": { "message": "پیشرفته" },
+  "smartHintOff": {
+    "message": "بدون تصحیح خودکار — بیشترین سازگاری با سایت‌ها."
+  },
+  "smartHintSafe": {
+    "message": "استفاده از Unicode BiDi خود مرورگر — سازگار با اکثر سایت‌ها."
+  },
+  "smartHintAggressive": {
+    "message": "تشخیص و ایزوله‌سازی دقیق ایمیل، URL و اعداد. ممکن است در سایت‌های پیچیده خطا ایجاد کند."
+  },
+  "chkAlign": { "message": "راست‌چین کردن متن" },
+  "chkFont": { "message": "فونت فارسی (Vazirmatn)" },
+  "chkGlobal": { "message": "همهٔ سایت‌ها RTL باشند" },
+  "btnOptions": { "message": "مدیریت دامنه‌ها و پشتیبان…" },
+  "ctxMenuTitle": { "message": "تغییر حالت RTL" },
+
+  "optTitle": { "message": "تنظیمات ArvinX RTLify" },
+  "optGlobalTitle": { "message": "حالت سراسری" },
+  "optGlobalDesc": {
+    "message": "اگر روشن باشد، همه سایت‌ها به طور پیش‌فرض RTL می‌شوند مگر اینکه برای دامنه‌ای خلاف آن تنظیم شود."
+  },
+  "optDomainsTitle": { "message": "دامنه‌های تنظیم‌شده" },
+  "optEmpty": { "message": "هیچ دامنه‌ای ثبت نشده است." },
+  "optClearAll": { "message": "حذف همهٔ تنظیمات دامنه" },
+  "optBackupTitle": { "message": "پشتیبان‌گیری" },
+  "optExport": { "message": "دانلود پشتیبان" },
+  "optImport": { "message": "بارگذاری پشتیبان" },
+  "optImported": { "message": "✅ تنظیمات با موفقیت بارگذاری شد." },
+  "optInvalidFile": { "message": "❌ فایل نامعتبر: " },
+  "optConfirmClear": {
+    "message": "همهٔ تنظیمات دامنه‌ها حذف شوند؟ (تنظیمات کلی حفظ می‌شود.)"
+  },
+  "optDeleteBtn": { "message": "حذف" }
+}

@@ -1,0 +1,44 @@
+{
+  "extName": { "message": "ArvinX RTLify" },
+  "extDesc": {
+    "message": "Smart RTL toggle with domain memory and code block protection."
+  },
+  "cmdDesc": { "message": "Quick Toggle RTL" },
+  "toggleBtnOn": { "message": "Disable RTL" },
+  "toggleBtnOff": { "message": "Enable RTL" },
+  "hostNA": { "message": "Not available on this page" },
+  "smartModeTitle": { "message": "Smart Mode (Latin Content)" },
+  "smartOff": { "message": "Off" },
+  "smartSafe": { "message": "Safe" },
+  "smartAggressive": { "message": "Advanced" },
+  "smartHintOff": { "message": "No auto-correction. Maximum compatibility." },
+  "smartHintSafe": {
+    "message": "Uses browser BiDi. Compatible with most sites."
+  },
+  "smartHintAggressive": {
+    "message": "Isolates emails, URLs, and numbers. May glitch on complex SPAs."
+  },
+  "chkAlign": { "message": "Right-align text" },
+  "chkFont": { "message": "Persian Font (Vazirmatn)" },
+  "chkGlobal": { "message": "Make ALL sites RTL by default" },
+  "btnOptions": { "message": "Manage Domains & Backup..." },
+  "ctxMenuTitle": { "message": "Toggle RTL" },
+
+  "optTitle": { "message": "ArvinX RTLify Settings" },
+  "optGlobalTitle": { "message": "Global Mode" },
+  "optGlobalDesc": {
+    "message": "If enabled, all sites will be RTL by default unless specifically turned off."
+  },
+  "optDomainsTitle": { "message": "Configured Domains" },
+  "optEmpty": { "message": "No domains configured yet." },
+  "optClearAll": { "message": "Clear All Domain Settings" },
+  "optBackupTitle": { "message": "Backup" },
+  "optExport": { "message": "Download Backup" },
+  "optImport": { "message": "Import Backup" },
+  "optImported": { "message": "✅ Settings imported successfully." },
+  "optInvalidFile": { "message": "❌ Invalid file: " },
+  "optConfirmClear": {
+    "message": "Are you sure you want to clear all domain settings?"
+  },
+  "optDeleteBtn": { "message": "Delete" }
+}
