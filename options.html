@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>تنظیمات — RTL Toggle Pro</title>
+    <style>
+      :root {
+        --accent: #0a7d4f;
+        --bg: #fff;
+        --text: #1a1a1a;
+        --muted: #666;
+        --border: #e0e0e0;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --accent: #3dd68c;
+          --bg: #121212;
+          --text: #f0f0f0;
+          --muted: #aaa;
+          --border: #333;
+        }
+      }
+      body {
+        max-width: 720px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Vazirmatn", Tahoma, sans-serif;
+        line-height: 1.9;
+      }
+      h1 {
+        color: var(--accent);
+      }
+      h2 {
+        margin-top: 2rem;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 0.3rem;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0.75rem;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        margin-bottom: 0.5rem;
+        font-family: monospace;
+        direction: ltr;
+        text-align: left;
+      }
+      li button {
+        font-family: inherit;
+        direction: rtl;
+        background: #c43838;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 0.25rem 0.7rem;
+        cursor: pointer;
+      }
+      button.action {
+        background: var(--accent);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 0.6rem 1rem;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 14px;
+      }
+      input[type="file"] {
+        margin-right: 0.5rem;
+      }
+      .muted {
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>تنظیمات RTL Toggle Pro</h1>
+
+    <h2>دامنه‌های همیشه RTL</h2>
+    <p class="muted">
+      هر سایتی که اینجا ببینی، هنگام باز شدن به‌صورت خودکار RTL می‌شود.
+    </p>
+    <ul id="domains"></ul>
+    <p id="empty" class="muted">هیچ دامنه‌ای ثبت نشده است.</p>
+    <button id="clear" class="action">حذف همه</button>
+
+    <h2>پشتیبان‌گیری</h2>
+    <button id="export" class="action">دانلود فایل پشتیبان</button>
+    <input type="file" id="import" accept=".json" />
+    <p class="muted" id="importMsg"></p>
+
+    <script src="options.js"></script>
+  </body>
+</html>

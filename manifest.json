@@ -1,10 +1,11 @@
 {
   "manifest_version": 3,
   "name": "ArvinX RTLify",
-  "version": "1.0.0",
-  "description": "One-click RTL toggle for web pages. By Arvin X Team. | تبدیل یک‌کلیکی صفحات وب به راست‌به‌چپ. توسط Arvin X Team.",
+  "version": "2.0.0",
+  "description": "ArvinX RTLify: Smart RTL with domain memory. DEV:ArvinX Team | تبدیل هوشمند صفحات وب به راست‌به‌چپ با حافظه دامنه.",
   "minimum_chrome_version": "102",
-  "permissions": ["activeTab", "scripting", "storage"],
+  "permissions": ["activeTab", "scripting", "storage", "contextMenus", "tabs"],
+  "host_permissions": ["<all_urls>"],
   "background": {
     "service_worker": "background.js"
   },
@@ -14,17 +15,30 @@
     "128": "icons/icon128.png"
   },
   "action": {
-    "default_title": "تبدیل به RTL (Alt+Shift+R)",
+    "default_popup": "popup.html",
+    "default_title": "ArvinX RTLify",
     "default_icon": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",
       "128": "icons/icon128.png"
     }
   },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
   "commands": {
-    "_execute_action": {
+    "toggle-rtl": {
       "suggested_key": { "default": "Alt+Shift+R" },
-      "description": "تغییر جهت صفحه"
+      "description": "تغییر سریع RTL"
     }
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
 }
